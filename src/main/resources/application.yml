@@ -3,9 +3,11 @@ server:
 spring:
   application:
     name: hmdp
+  profiles:
+    active: dev # 指定当前环境
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.83.123:3306/hmdp?useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.83.123:3306/hmdp?useSSL=true&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     username: root
     password: 23321212
   redis:
